@@ -1,0 +1,15 @@
+square = x => x * x
+
+square = (x) => {
+    return x * x
+}
+
+square = x => {
+  return x * x
+}
+
+mult = (x, y) => x * y
+
+mult = (x, y) = > {
+    return x * y
+}

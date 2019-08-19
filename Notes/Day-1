@@ -1,3 +1,10 @@
 If a variable is declared with 'var' keyword, it will be available till nearest functiona level.
 Named function can be called before declaring because it is parsed and registered in java script engine
 Anonymous function can not be called before declaring.
+Spread operator is kind of Object.assign
+
+Never give space in react app name
+
+npm i -g create-react-app
+
+look in github repository issues to find the problem solution first then stack overflow

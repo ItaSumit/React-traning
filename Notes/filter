@@ -1,0 +1,44 @@
+Exapmle:1
+
+const arr =[
+  {
+    name:'superman',
+    age: 50
+  }
+  , {
+    name:'catwoman',
+    age: 20
+  },
+   {
+    name:'Shakimanman',
+     age: 25
+  },
+  {
+    name:'superman',
+    age: 40
+  }
+]
+
+
+function append(x){
+  return {
+    'name': x.name+'-'
+  }
+}
+
+function check(x){
+  if(x.name == 'superman'){
+    return true;
+  }
+  return false;
+}
+
+//result = arr.map(append)
+
+result = arr.filter(check)
+
+
+console.log(result)
+
+Example:2 (filter and map)
+

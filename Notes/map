@@ -1,0 +1,37 @@
+example:1
+
+const arr = [1,2,3,4,5,6]
+function square(x, index){
+  console.log(index)
+  return x * x
+}
+
+squares = arr.map(square)
+//squares = arr.map((x, i) => square(x, i))
+
+
+console.log(squares)
+
+example:2
+
+const arr =[
+  {
+    name:'superman'
+  }
+  , {
+    name:'catwoman'
+  },
+   {
+    name:'Shakimanman'
+  }
+]
+
+
+function append(x){
+  return {
+    'name': x.name+'-'
+  }
+}
+
+result = arr.map(append)
+console.log(JSON.stringify(result))

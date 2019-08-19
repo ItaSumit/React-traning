@@ -1,0 +1,19 @@
+JSON types
+
+[
+    {
+        
+    }
+] - when all record has same columns
+
+[[]] - when columns are not fixed and need to repeat the diffrent less or more columns
+
+{} - for config files
+
+[]
+
+String to JS
+JSON.parse(data)
+
+JS to String
+JSON.stringify(data)

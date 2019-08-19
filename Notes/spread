@@ -1,0 +1,34 @@
+const arr =[
+  {
+    name:'superman',
+    age: 50,
+    married: false
+  }
+  , {
+    name:'catwoman',
+    age: 20,
+    married: false
+  },
+   {
+    name:'Shakimanman',
+     age: 25,
+    married: true
+  },
+  {
+    name:'superman',
+    age: 40
+  }
+]
+
+function appendV1(x){
+  return {
+    ...x,
+    'name': x.name+'-',
+    'age': x.age +10,
+    'married': x.married
+  }
+}
+
+result = arr.map(appendV1);
+
+console.log(result)
