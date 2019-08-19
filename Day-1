@@ -1,0 +1,3 @@
+If a variable is declared with 'var' keyword, it will be available till nearest functiona level.
+Named function can be called before declaring because it is parsed and registered in java script engine
+Anonymous function can not be called before declaring.

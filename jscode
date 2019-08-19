@@ -1,0 +1,55 @@
+//Named funcion
+function square(x){
+  return x*x
+}
+
+result=square(3)
+console.log(result)
+
+//Anonymous:
+
+//result_1 = square_1(3)
+//console.log("Anonymous funcion result"+ result_1)
+//Above commneted line will produce the error becuase java script does not know square_1 yet
+
+square_1 = function(x){
+  return x*x
+}
+
+result_1 = square_1(3)
+console.log("Anonymous funcion result"+ result_1)
+
+ES6-
+let- it is blocked scope
+
+for(let i=0;i<3;i++){
+
+}
+console.log(i); // produce an reference error as i is not available outside for block due to it is decalred with 'let' not 'var'
+
+let i=0;
+let i=2;
+
+second declaration will give error.
+
+const - If variable declared with const is object, we can change object content but we can not assign a new object to that variable
+
+const customer = { name: 'ironman'}
+customer = {} // error
+customer['name'] = 'batman' // ok
+
+const arr = [1,2]
+arr = [5] // error
+arr[0] = 4 // ok
+
+
+
+string is immuatble data sctructure.
+str = "hello world"
+str[0] = "F" // no effect on str
+
+objects don't store any data and it is mutable and it stores address of its content
+
+Javascript is address based language
+
+
