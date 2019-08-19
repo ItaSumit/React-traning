@@ -1,0 +1,13 @@
+.information {
+    background-color: pink;
+    height: 200px;
+    display: flex
+  }
+  
+  .information1 {
+    width: 50%
+  }
+  
+  .information2 {
+    width: 50%
+  }
