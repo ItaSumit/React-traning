@@ -17,7 +17,9 @@ class CreaditCardPage extends React.Component {
   };
 
   renderCards = (d, index) => {
-    return <CardComponent {...d} claickHandler={this.claickHandler} />;
+    return (
+      <CardComponent {...d} claickHandler={this.claickHandler} key={index} />
+    );
   };
 
   render() {

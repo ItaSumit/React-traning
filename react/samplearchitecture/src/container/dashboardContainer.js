@@ -6,7 +6,7 @@ class DashboardContainer extends React.Component {
   render() {
     return (
       <div>
-        <CreaditCardPage />
+        {/* <CreaditCardPage /> */}
         <LiquidityPage />
       </div>
     );
