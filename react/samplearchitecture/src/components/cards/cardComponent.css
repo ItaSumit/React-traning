@@ -1,0 +1,18 @@
+.card {
+    width: 20%;
+    height: 100px;
+    margin: 2px
+  }
+  
+  .cardImage {
+    height: 50%;
+    width: 100%;
+    background-color: yellow;
+  }
+  
+  .cardTitle {
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+  }
+  

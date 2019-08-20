@@ -1,0 +1,9 @@
+While import, 
+
+Without curly braces- It will look for any default export in the file
+With curly braces - Named exports in the file
+
+DOM event and syntheic event
+Never give call to function , provide only address
+When difining anonymous function, it returns address
+onCLick expects the function address not function call
