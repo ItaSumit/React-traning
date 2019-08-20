@@ -1,6 +1,8 @@
 import React from "react";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
+import PageViewIcon from "@material-ui/icons/Pageview";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 class TableComponent extends React.Component {
   columns = [
@@ -19,6 +21,20 @@ class TableComponent extends React.Component {
     {
       Header: "Country",
       accessor: "customerCountry"
+    },
+    {
+      Header: "Actions",
+      accessor: "xyz",
+      Cell: row => (
+        <div>
+          <PageViewIcon
+            onClick={() => this.props.onViewHandler(row.original)}
+          />
+          <DeleteIcon
+            onClick={() => this.props.onDeleteHandler(row.original)}
+          />
+        </div>
+      )
     }
   ];
 

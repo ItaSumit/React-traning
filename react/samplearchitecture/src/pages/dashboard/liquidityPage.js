@@ -1,6 +1,7 @@
 import React from "react";
 import FormComponent from "../../components/forms/formComponent";
 import TableComponent from "../../components/table/tableComponent";
+import ViewComponent from "../../components/view/viewComponent";
 
 class LiquidityPage extends React.Component {
   state = {
@@ -17,7 +18,13 @@ class LiquidityPage extends React.Component {
         customerAge: "34",
         customerCountry: "India"
       }
-    ]
+    ],
+    viewData: {
+      customerId: "",
+      customerName: "",
+      customerAge: "",
+      customerCountry: ""
+    }
   };
 
   onFormSubmitHandler = customer => {
@@ -27,16 +34,36 @@ class LiquidityPage extends React.Component {
       data: dataCopy
     });
   };
+
+  onDeleteHandler = data => {
+    const filtered = this.state.data.filter(
+      d => d.customerId !== data.customerId
+    );
+    this.setState({
+      data: filtered
+    });
+  };
+
+  onViewHandler = data => {
+    this.setState({
+      viewData: data
+    });
+  };
+
   render() {
     return (
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <TableComponent data={this.state.data} />
+        <TableComponent
+          data={this.state.data}
+          onViewHandler={this.onViewHandler}
+          onDeleteHandler={d => this.onDeleteHandler(d)}
+        />
         <div style={{ display: "flex" }}>
           <div style={{ width: "50%" }}>
             <FormComponent onFormSubmitHandler={this.onFormSubmitHandler} />
           </div>
           <div style={{ width: "50%" }}>
-            <FormComponent />
+            <ViewComponent data={this.state.viewData} />
           </div>
         </div>
       </div>
