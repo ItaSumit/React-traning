@@ -9,6 +9,29 @@ import LoginContainer from "./container/loginContainer";
 axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 axios.defaults.headers.common["Authorization"] = "Auth Token";
 axios.defaults.headers.common["Content-Type"] = "application/json";
+axios.interceptors.request.use(
+  request => {
+    //Edit the request
+    console.log("Request interceptor:", request);
+    return request;
+  },
+  error => {
+    console.log(error);
+    return Promise.reject(error);
+  }
+);
+
+axios.interceptors.response.use(
+  response => {
+    //Edit the response
+    console.log("response interceptor:", response);
+    return response;
+  },
+  error => {
+    console.log(error);
+    return Promise.reject(error);
+  }
+);
 
 class App extends React.Component {
   // componentDidMount() {
