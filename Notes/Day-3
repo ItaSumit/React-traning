@@ -1,0 +1,12 @@
+Life cycle
+
+componentDidMount : Called after render. called when all children are evaluted. If there are multiple component in one component, those will be mounted one by one in order. call setState in this.
+componentWillMount: calling setState is prohibited here. Subscribe global events in this (example: window resize event)
+componentDidUpdate: has previousStateProps and compare current props. 
+
+Functional Component:  Need to declare it with const or let. It accepts only one parameter , that is 'Props'. Importing React is mandatory.
+
+useEffect is called after render
+
+React-router-dom
+React-router-native

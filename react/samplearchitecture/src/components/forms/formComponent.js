@@ -1,6 +1,14 @@
 import React from "react";
 
 class FormComponent extends React.Component {
+  componentDidMount() {
+    console.log("FormComponent mounted.");
+  }
+
+  componentWillMount() {
+    console.log("FormComponent will mount.");
+  }
+
   dataSubmitHandler = () => {
     this.props.onFormSubmitHandler(this.state.formData);
     // alert("Form submitted:" + JSON.stringify(this.state));
@@ -16,7 +24,7 @@ class FormComponent extends React.Component {
   };
 
   formHandler = event => {
-    console.log(`${event.target.name}- ${event.target.value}`);
+    // console.log(`${event.target.name}- ${event.target.value}`);
     this.setState({
       formData: {
         ...this.state.formData,
