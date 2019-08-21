@@ -2,21 +2,26 @@ import React from "react";
 
 class FormComponent extends React.Component {
   dataSubmitHandler = () => {
-    this.props.onFormSubmitHandler(this.state);
+    this.props.onFormSubmitHandler(this.state.formData);
     // alert("Form submitted:" + JSON.stringify(this.state));
   };
 
   state = {
-    customerId: "",
-    customerName: "",
-    customerAge: "",
-    customerCountry: ""
+    formData: {
+      customerId: "",
+      customerName: "",
+      customerAge: "",
+      customerCountry: ""
+    }
   };
 
   formHandler = event => {
     console.log(`${event.target.name}- ${event.target.value}`);
     this.setState({
-      [event.target.name]: event.target.value
+      formData: {
+        ...this.state.formData,
+        [event.target.name]: event.target.value
+      }
     });
   };
 
@@ -26,7 +31,7 @@ class FormComponent extends React.Component {
         Customer ID:
         <input
           type="text"
-          value={this.state.customerId}
+          value={this.state.formData.customerId}
           onChange={this.formHandler}
           name="customerId"
         />
@@ -34,7 +39,7 @@ class FormComponent extends React.Component {
         Name
         <input
           type="text"
-          value={this.state.customerName}
+          value={this.state.formData.customerName}
           onChange={this.formHandler}
           name="customerName"
         />
@@ -42,7 +47,7 @@ class FormComponent extends React.Component {
         Age:
         <input
           type="text"
-          value={this.state.customerAge}
+          value={this.state.formData.customerAge}
           onChange={this.formHandler}
           name="customerAge"
         />
@@ -50,7 +55,7 @@ class FormComponent extends React.Component {
         Country:
         <input
           type="text"
-          value={this.state.customerCountry}
+          value={this.state.formData.customerCountry}
           onChange={this.formHandler}
           name="customerCountry"
         />
