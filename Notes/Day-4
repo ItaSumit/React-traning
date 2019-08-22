@@ -1,0 +1,44 @@
+BrowseRouter may fail with nginx.
+
+BrowseRouter may fail With electronJs
+
+User HashRouter with nginx and electron js. Browser will understand things after hash as querystring. 
+
+
+For redirect with some data: pass a object with pathname and state in  Link and history  
+Querystring: has data in search object 
+
+
+Redux- SST, single source of truth
+
+Two library: Redux, React-Redux
+
+
+HOC:
+
+function f1(x, y) {
+  console.log(x, y);
+  return f2;
+}
+
+function f2(a) {
+  console.log(a);
+}
+
+f1(1, 2)(3);
+
+Closure
+
+function f1(a) {
+  function f2() {
+    console.log(a);
+  }
+
+  return f2;
+}
+
+f3 = f1(10);
+
+console.log("xyz");
+f3();
+

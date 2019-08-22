@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import DashboardContainer from "./container/dashboardContainer";
 import ResourceNotFoundContainer from "./container/resourceNotFoundContainer";
+import ReduxTestContainer from "./container/reduxTestContainer";
+
 import axios from "axios";
 
 import LoginContainer from "./container/loginContainer";
@@ -46,7 +48,7 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path="/" exact component={DashboardContainer} />
+          <Route path="/" exact component={ReduxTestContainer} />
           <Route path="/Dashboard" component={DashboardContainer} />
           <Route path="/login" component={LoginContainer} />
           <Route component={ResourceNotFoundContainer} />

@@ -8,5 +8,8 @@ Functional Component:  Need to declare it with const or let. It accepts only one
 
 useEffect is called after render
 
-React-router-dom
-React-router-native
+React-Router->
+       React-router-dom
+       React-router-native
+
+https://jsonplaceholder.typicode.com
