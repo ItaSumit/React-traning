@@ -6,9 +6,11 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 const LoginPage = props => {
   const match = props.match;
+  console.log(match);
   return (
     <div>
       <Switch>
+        {/* <Route path={`${match.path}`} exact component={LoginContainer} /> */}
         <Route path={`${match.path}/login`} component={LoginContainer} />
         <Route path={`${match.path}/register`} component={RegisterContainer} />
       </Switch>
